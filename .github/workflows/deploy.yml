@@ -1,7 +1,7 @@
 name: Deploy BFF to Render
 
 on:
-  
+  workflow_dispatch:
   push:
     branches: [main]
 
