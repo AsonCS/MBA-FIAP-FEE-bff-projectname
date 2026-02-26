@@ -1,0 +1,15 @@
+{
+  "name": "bff-node-app",
+  "version": "1.0.0",
+  "description": "A BFF (Backend for Frontend) application built with Node.js and Express.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
