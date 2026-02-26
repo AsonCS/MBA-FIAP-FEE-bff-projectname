@@ -1,0 +1,22 @@
+services:
+    app:
+        build: .
+        container_name: app
+        environment:
+            - PORT=80
+        ports:
+            - 80:80
+        volumes:
+            - .:/home/node/app
+        healthcheck:
+            test:
+                [
+                    'CMD',
+                    'curl',
+                    '-f',
+                    'http://localhost/health'
+                ]
+            interval: 30s
+            timeout: 10s
+            retries: 3
+            start_period: 15s # Grace period for initialization
