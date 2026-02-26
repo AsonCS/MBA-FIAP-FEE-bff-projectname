@@ -4,16 +4,18 @@
   "description": "A BFF (Backend for Frontend) application built with Node.js and Express.",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node --experimental-loader=newrelic/esm-loader.mjs src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@google/genai": "^1.42.0",
     "axios": "^1.9.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^4.17.1",
     "express-rate-limit": "^7.5.0",
-    "newrelic": "^12.20.0"
+    "newrelic": "^12.20.0",
+    "openai": "^6.25.0"
   },
   "author": "",
   "license": "ISC"

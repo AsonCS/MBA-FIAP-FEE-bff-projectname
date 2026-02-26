@@ -1,0 +1,13 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        command: ['sh', './.docker/start.sh']
+        container_name: app
+        environment:
+            - PORT=80
+        ports:
+            - 80:80
+        volumes:
+            - .:/home/node/app

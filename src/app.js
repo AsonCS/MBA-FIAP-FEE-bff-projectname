@@ -50,7 +50,7 @@ app.use('/ask', askRoute);
 
 // Define uma rota GET em '/health' que retorna um status 200 e um JSON indicando que o serviço está ok
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok' });
+  res.status(200).json({ status: 'ok', uptime: process.uptime() });
 });
 
 // Define a porta do servidor, usando a variável de ambiente PORT ou 3000 como padrão
@@ -60,4 +60,4 @@ const PORT = process.env.PORT || 3000;
 app.set('trust proxy', 1);
 
 // Inicia o servidor e exibe uma mensagem no console indicando em qual porta está rodando
-app.listen(PORT, () => console.log(`BFF rodando na porta ${PORT}`));
+app.listen(PORT, () => console.log(`BFF rodando em http://localhost:${PORT}/health`));

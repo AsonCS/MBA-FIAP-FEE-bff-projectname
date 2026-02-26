@@ -1,0 +1,11 @@
+FROM node:24
+
+USER node
+
+WORKDIR /home/node/app
+
+COPY . .
+
+EXPOSE 80
+
+CMD ["tail", "-f", "/dev/null"]
